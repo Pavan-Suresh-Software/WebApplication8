@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Property Values";
+    var test = (IDictionary<string, Tuple<string, string, object>>)Model;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="SavePdfFromView" method="post">
+
+    @* @foreach (var item in Model)
+    {
+    <div>
+    <p>Property Name: @item.Value.Item1</p>
+    <p>Label Type: @item.Value.Item2</p>
+    <p>Value: @item.Value.Item3</p>
+    </div>
+    } *@
+
+    <div>
+        <label for="@test["Hello"]">@test["Hello"].Item2</label>
+        <input type="text" id="@test["Hello"]" name="@test["Hello"]" value="@test["Hello"].Item3" />
+        <hr />
+        <label for="@test["World"]">@test["World"].Item2</label>
+        <input type="text" id="@test["World"]" name="@test["World"]" value="@test["World"].Item3" />
+    </div>
+
+    <button type="submit">Save</button>
+  
+</form>
