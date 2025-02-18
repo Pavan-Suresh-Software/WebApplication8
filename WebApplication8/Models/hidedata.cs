@@ -5,6 +5,6 @@ namespace WebApplication8.Models
     public class hidedata
     {
         [NotMapped]
-        public bool export { get; set; } = true;
+        public bool export { get; set; } = true;//
     }
 }
