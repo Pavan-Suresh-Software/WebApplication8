@@ -8,4 +8,3 @@
         public string labeltype { get; set; }//                       
     }
 }
-.
